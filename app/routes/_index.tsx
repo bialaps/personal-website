@@ -23,18 +23,18 @@ export default function Index() {
         <img
           src={ProfilePicture}
           alt="Side Portrait"
-          className="w-44 h-44 md:w-52 md:h-52 object-cover grayscale rounded-full"
+          className="w-44 h-44 md:w-52 md:h-52 object-cover grayscale rounded-full border-2 border-emerald-500"
         />
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-emerald-500">
         Hello, I am Marcel!
       </h1>
-      <h2 className="text-xl md:text-xl mt-3 mb-12 text-gray-900 font-medium leading-7">
+      <h2 className="text-xl md:text-xl mt-3 mb-12 text-gray-900 dark:text-gray-200 font-medium leading-7">
         I am a (junior) frontend developer from Germany with a passion for
         design and aesthetics. I love motorsports and used to play drums in a
         metal band.
       </h2>
-      <div className="socials flex gap-4 text-gray-600 ">
+      <div className="socials flex gap-4 text-gray-600 dark:text-gray-200">
         <Link
           to="https://www.github.com/marcelbialas"
           className="hover:text-emerald-500 transition-all duration-200"

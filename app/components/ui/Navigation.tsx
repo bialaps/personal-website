@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react";
-
-import { SunMoon } from "lucide-react";
+import ThemeToggle from "../ThemeToggle";
 
 export default function Navigation() {
   return (
@@ -13,10 +12,7 @@ export default function Navigation() {
           mbialas.de
         </Link>
         <span>|</span>
-        <SunMoon
-          size="24"
-          className="hover:text-emerald-500 transition-all duration-200 cursor-pointer"
-        />
+        <ThemeToggle />
       </div>
       <ul className="navbar-nav flex gap-3 text-base font-medium items-center justify-center">
         <li>

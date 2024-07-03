@@ -12,7 +12,7 @@ import Footer from "./components/ui/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,13 +20,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Navigation />
-        <div className="container py-4 px-3 md:w-[55vw] mx-auto">
-          {children}
+        <div className="w-screen h-screen dark:bg-gray-950 dark:text-gray-200">
+          <Navigation />
+          <div className="container py-4 px-3 md:w-[55vw] mx-auto dark:bg-gray-950 dark:text-gray-200">
+            {children}
+          </div>
+          <ScrollRestoration />
+          <Scripts />
+          <Footer />
         </div>
-        <ScrollRestoration />
-        <Scripts />
-        <Footer />
       </body>
     </html>
   );
