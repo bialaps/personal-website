@@ -8,6 +8,7 @@ import {
 import "./styles/tailwind.css";
 import "./styles/main.css";
 import Navigation from "./components/ui/Navigation";
+import Footer from "./components/ui/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,9 +21,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <Navigation />
-        <div className="container p-4 md:w-[55vw] mx-auto">{children}</div>
+        <div className="container py-4 px-3 md:w-[55vw] mx-auto">
+          {children}
+        </div>
         <ScrollRestoration />
         <Scripts />
+        <Footer />
       </body>
     </html>
   );

@@ -2,7 +2,7 @@
   font-family: "Sn Pro";
   src: url("/fonts/SNPro-Regular.woff2") format("woff2"),
     url("/fonts/SNPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -10,7 +10,7 @@
   font-family: "Sn Pro";
   src: url("/fonts/SNPro-Medium.woff2") format("woff2"),
     url("/fonts/SNPro-Medium.woff") format("woff");
-  font-weight: medium;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -18,7 +18,7 @@
   font-family: "Sn Pro";
   src: url("/fonts/SNPro-Bold.woff2") format("woff2"),
     url("/fonts/SNPro-Bold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 

@@ -3,6 +3,8 @@ import { Link } from "@remix-run/react";
 
 import { Linkedin, Instagram, Github, AtSign } from "lucide-react";
 
+import ProfilePicture from "./../assets/img/vbt.jpg";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Marcel Bialas" },
@@ -16,26 +18,47 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="p-4 flex flex-col justify-center items-center text-center">
-      <h1 className="text-5xl font-bold">Hello, I am Marcel!</h1>
-      <h2 className="text-xl my-6 text-gray-600">
-        I am a front-end developer from Germany with a passion for design and
-        aesthetics. I&apos;m a motorsport fanatic who used to play drums in a
+    <div className="py-4 flex flex-col justify-center items-center text-center tracking-wide">
+      <div className="pt-6 pb-12 md:pt-3 md:pb-12">
+        <img
+          src={ProfilePicture}
+          alt="Side Portrait"
+          className="w-44 h-44 md:w-52 md:h-52 object-cover grayscale rounded-full"
+        />
+      </div>
+      <h1 className="text-4xl md:text-5xl font-bold text-emerald-500">
+        Hello, I am Marcel!
+      </h1>
+      <h2 className="text-xl md:text-xl mt-3 mb-12 text-gray-900 font-medium leading-7">
+        I am a (junior) frontend developer from Germany with a passion for
+        design and aesthetics. I love motorsports and used to play drums in a
         metal band.
       </h2>
-      <div className="socials flex gap-4 text-gray-600">
-        <Link to="https://www.github.com/marcelbialas">
-          <Github size="30" />
+      <div className="socials flex gap-4 text-gray-600 ">
+        <Link
+          to="https://www.github.com/marcelbialas"
+          className="hover:text-emerald-500 transition-all duration-200"
+        >
+          <Github size="28" />
         </Link>
         <Link to="https://www.instagram.com/marcelbialas">
-          <Instagram size="30" />
+          <Instagram
+            size="28"
+            className="hover:text-emerald-500 transition-all duration-200"
+          />
         </Link>
         <Link to="https://www.linkedin.com/in/marcel-bialas-a4374a28b/">
-          <Linkedin size="30" />
+          <Linkedin
+            size="28"
+            className="hover:text-emerald-500 transition-all duration-200"
+          />
         </Link>
         <Link to="mailto:marcel@mbialas.de">
           <span title="Send me a E-Mail">
-            <AtSign size="30" />
+            <AtSign
+              size="28"
+              className="hover:text-emerald-500 transition-all duration-200"
+            />
           </span>
         </Link>
       </div>
