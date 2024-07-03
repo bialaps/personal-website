@@ -1,48 +1,44 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
+
+import { Linkedin, Instagram, Github, AtSign } from "lucide-react";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Marcel Bialas" },
+    {
+      name: "description",
+      content:
+        "I am a front-end developer from Germany with a passion for design and aesthetics",
+    },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="p-4 flex flex-col justify-center items-center text-center">
+      <h1 className="text-5xl font-bold">Hello, I am Marcel!</h1>
+      <h2 className="text-xl my-6 text-gray-600">
+        I am a front-end developer from Germany with a passion for design and
+        aesthetics. I&apos;m a motorsport fanatic who used to play drums in a
+        metal band.
+      </h2>
+      <div className="socials flex gap-4 text-gray-600">
+        <Link to="https://www.github.com/marcelbialas">
+          <Github size="30" />
+        </Link>
+        <Link to="https://www.instagram.com/marcelbialas">
+          <Instagram size="30" />
+        </Link>
+        <Link to="https://www.linkedin.com/in/marcel-bialas-a4374a28b/">
+          <Linkedin size="30" />
+        </Link>
+        <Link to="mailto:marcel@mbialas.de">
+          <span title="Send me a E-Mail">
+            <AtSign size="30" />
+          </span>
+        </Link>
+      </div>
     </div>
   );
 }
