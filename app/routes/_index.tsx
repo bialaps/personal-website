@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "I am a front-end developer from Germany with a passion for design and aesthetics",
+        "I am a front-end developer from Germany with an eye for design and aesthetics",
     },
   ];
 };
@@ -30,9 +30,9 @@ export default function Index() {
         Hello, I am Marcel!
       </h1>
       <h2 className="text-xl md:text-xl mt-3 mb-12 text-gray-900 dark:text-gray-200 font-medium leading-7">
-        I am a (junior) frontend developer from Germany with a passion for
-        design and aesthetics. I love motorsports and used to play drums in a
-        metal band.
+        I am a (junior) frontend developer from Germany with an eye for design
+        and aesthetics. I love motorsports and I used to play drums in a metal
+        band.
       </h2>
       <div className="socials flex gap-4 text-gray-600 dark:text-gray-200">
         <Link

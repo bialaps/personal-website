@@ -22,7 +22,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Meta />
           <Links />
         </head>
-        <body>
+        <body className="dark:bg-gray-950">
           <div className="w-screen h-screen dark:bg-gray-950 dark:text-gray-200">
             <Navigation />
             <div className="container py-4 px-3 md:w-[55vw] mx-auto dark:bg-gray-950 dark:text-gray-200">
