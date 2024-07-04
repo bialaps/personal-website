@@ -23,7 +23,7 @@ export default function Index() {
         <img
           src={ProfilePicture}
           alt="Side Portrait"
-          className="w-44 h-44 md:w-52 md:h-52 object-cover grayscale rounded-full border-2 border-emerald-500"
+          className="w-44 h-44 md:w-46 md:h-46 object-cover grayscale rounded-full"
         />
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-emerald-500">
