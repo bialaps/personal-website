@@ -18,12 +18,11 @@ export default function About() {
         </small> */}
       </div>
       <p className="md:text-xl text-lg font-medium">
-        Hello, I&aposm Marcel, a 29-year-old from the beautiful Ruhr area,
-        living in Herne. I discovered my passion for motorsport and music at an
-        early age. For many years, I worked at a karting track, where I was able
-        to turn my enthusiasm for motorsport into a profession. In addition, I
-        used to be a drummer in a local metal band and played the trumpet in a
-        big band.
+        Hello, I&apos;m Marcel, 29-year-old from Germany, living in the Ruhr
+        area. I discovered my passion for motorsport and music at an early age.
+        For many years, I worked at a karting track, where I was able to turn my
+        enthusiasm for motorsport into a profession. In addition, I used to be a
+        drummer in a local metal band and played the trumpet in a big band.
       </p>
       <p className="md:text-xl text-lg font-medium py-4">
         My interest in development began when I was about 14 years old, when I
@@ -40,7 +39,7 @@ export default function About() {
         to="https://www.linkedin.com/in/marcel-bialas-a4374a28b/"
         className="my-12"
       >
-        <button className="flex items-center justify-center bg-gray-200 text-gray-900 rounded-2xl py-3 px-6 font-bold md:text-xl gap-3 mt-6 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300">
+        <button className="flex items-center justify-center bg-gray-200 text-gray-900 rounded-2xl py-3 px-6 font-bold md:text-md gap-3 mt-6 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300">
           <Linkedin />
           View CV on LinkedIn
         </button>
