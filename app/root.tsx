@@ -41,9 +41,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
               __html: `window.ENV = ${JSON.stringify(data.ENV)}`,
             }}
           />
-          <div className="w-screen h-screen dark:bg-gray-950 dark:text-gray-200">
+          <div className="w-screen dark:bg-gray-950 dark:text-gray-200 flex flex-col justify-between h-screen">
             <Navigation />
-            <div className="container py-4 px-3 md:w-[55vw] mx-auto dark:bg-gray-950 dark:text-gray-200">
+            <div className="container py-4 px-3 md:w-[55vw] mx-auto flex-grow dark:bg-gray-950 dark:text-gray-200">
               {children}
             </div>
             <ScrollRestoration />

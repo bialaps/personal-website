@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
-import { Linkedin, Instagram, Github, AtSign } from "lucide-react";
+import { Linkedin, Instagram, Github } from "lucide-react";
 
 import ProfilePicture from "./../assets/img/vbt.jpg";
 
@@ -52,14 +52,6 @@ export default function Index() {
             size="28"
             className="hover:text-emerald-500 transition-all duration-200"
           />
-        </Link>
-        <Link to="mailto:marcel@mbialas.de">
-          <span title="Send me a E-Mail">
-            <AtSign
-              size="28"
-              className="hover:text-emerald-500 transition-all duration-200"
-            />
-          </span>
         </Link>
       </div>
     </div>

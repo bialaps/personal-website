@@ -17,20 +17,20 @@ export default function About() {
           Go-kart track where I did my first laps
         </small> */}
       </div>
-      <p className="md:text-xl text-lg font-medium">
+      <p className="md:text-xl text-lg font-medium leading-relaxed md:leading-relaxed">
         Hello, I&apos;m Marcel, 29-year-old from Germany, living in the Ruhr
         area. I discovered my passion for motorsport and music at an early age.
         For many years, I worked at a karting track, where I was able to turn my
         enthusiasm for motorsport into a profession. In addition, I used to be a
         drummer in a local metal band and played the trumpet in a big band.
       </p>
-      <p className="md:text-xl text-lg font-medium py-4">
+      <p className="md:text-xl text-lg font-medium py-4 md:leading-relaxed">
         My interest in development began when I was about 14 years old, when I
         created my first website with a website builder. Curious about how the
         whole thing works, I expanded my knowledge and acquired further skills
         in web development over the years.
       </p>
-      <p className="md:text-xl text-lg font-medium">
+      <p className="md:text-xl text-lg font-medium md:leading-relaxed">
         Today, my focus is on creating user-friendly digital experiences through
         clean code and appealing design. I am always on the lookout for new
         technologies and projects that challenge and expand my skills.

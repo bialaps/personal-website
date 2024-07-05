@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <div>
       <h2 className="text-3xl text-center md:text-left md:text-4xl font-bold text-emerald-500 pt-6 pb-8">
-        Contact me :)
+        Send me a message
       </h2>
       <Form
         ref={form}
@@ -39,13 +39,13 @@ export default function Contact() {
           type="text"
           placeholder="Your Name"
           name="user_name"
-          className="py-3  block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
+          className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
         />
         <input
           type="email"
           placeholder="Your E-Mail Adress"
           name="user_email"
-          className="py-3  block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
+          className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
         />
         <textarea
           className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
@@ -56,7 +56,7 @@ export default function Contact() {
         <input
           type="submit"
           value="Send Message"
-          className="md:ml-auto md:w-1/4 bg-gray-200 text-gray-900 rounded-2xl py-3 px-6 font-bold md:text-md gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
+          className="md:ml-auto md:w-1/4 bg-gray-200 text-gray-900 rounded-2xl py-2 px-4 font-bold gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
         />
       </Form>
     </div>

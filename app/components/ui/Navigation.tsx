@@ -3,7 +3,7 @@ import ThemeToggle from "../ThemeToggle";
 
 export default function Navigation() {
   return (
-    <nav className="container md:w-[70vw] py-3 px-2 md:p-4 flex justify-between m-auto  md:bg-transparent ">
+    <nav className="container md:w-[70vw] py-3 px-2 md:p-4 flex justify-between m-auto md:bg-transparent">
       <div className="navbar-brand text-xl font-bold flex gap-2 items-center justify-center">
         <Link
           to="/"
