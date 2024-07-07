@@ -1,45 +1,57 @@
-import { Link } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 import ThemeToggle from "../ThemeToggle";
 
 export default function Navigation() {
   return (
     <nav className="container md:w-[70vw] py-3 px-2 md:p-4 flex justify-between m-auto md:bg-transparent">
       <div className="navbar-brand text-xl font-bold flex gap-2 items-center justify-center">
-        <Link
+        <NavLink
           to="/"
           className="hover:text-emerald-500 transition-all duration-200 "
         >
           mbialas.de
-        </Link>
+        </NavLink>
         <span>|</span>
         <ThemeToggle />
       </div>
       <ul className="navbar-nav flex gap-3 text-base font-medium items-center justify-center">
         <li>
-          <Link
+          <NavLink
             to="/about"
-            className="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            className={({ isActive }) =>
+              isActive
+                ? "text-emerald-500 font-bold border-b-2 border-emerald-500"
+                : "relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            }
           >
             about
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link
+          <NavLink
             to="/projects"
-            className="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            className={({ isActive }) =>
+              isActive
+                ? "text-emerald-500 font-bold border-b-2 border-emerald-500"
+                : "relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            }
           >
             projects
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link
+          <NavLink
             to="/contact"
-            className="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            className={({ isActive }) =>
+              isActive
+                ? "text-emerald-500 font-bold border-b-2 border-emerald-500"
+                : "relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-emerald-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-emerald-500"
+            }
           >
             contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
