@@ -1,6 +1,6 @@
 import { ActionFunctionArgs } from "@remix-run/node";
-import { Form, useActionData } from "@remix-run/react";
-import { useEffect, useRef, useState } from "react";
+import { Form, useActionData, useNavigation } from "@remix-run/react";
+import { useEffect, useRef } from "react";
 
 import nodemailer from "nodemailer";
 interface Errors {
@@ -24,23 +24,23 @@ export async function action({ request }: ActionFunctionArgs) {
   const errors: Errors = {};
 
   if (!email) {
-    errors.email = "Email is required";
+    errors.email = "E-mail address is required";
   } else if (!email.includes("@")) {
-    errors.email = "Invalid email adress";
+    errors.email = "Invalid email address";
   }
   if (!name) {
-    errors.name = "Please provide a Name";
+    errors.name = "Please enter a name";
   }
   if (!message) {
-    errors.message = "Please provide a Message";
+    errors.message = "Please enter your message";
   }
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: process.env.SMTP_HOST,
     port: 587,
     auth: {
-      user: "letitia5@ethereal.email",
-      pass: "PfUbwNrFmcHjKAGrq4",
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
   });
 
@@ -49,9 +49,10 @@ export async function action({ request }: ActionFunctionArgs) {
       errors: errors,
     };
   } else {
+    /* ADD TRY/CATCH TO SEND ERRORS FROM NODEMAILER */
     const info = await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: "marcelbialas@gmail.com",
+      to: process.env.RECIEVER_EMAIL,
       subject: "Contact Form: mbialas.de",
       text: message,
     });
@@ -67,16 +68,11 @@ export async function action({ request }: ActionFunctionArgs) {
 export default function Contact() {
   const actionData = useActionData<ActionData>();
   const form = useRef<HTMLFormElement>(null);
-
-  const [loading, setLoading] = useState<boolean>(false);
+  const navigation = useNavigation();
 
   useEffect(() => {
-    actionData?.errors && setLoading(false);
-
     if (actionData?.success) {
       form.current?.reset();
-
-      setLoading(false);
 
       setTimeout(() => {
         window.location.replace("/");
@@ -97,7 +93,6 @@ export default function Contact() {
       <Form
         method="post"
         ref={form}
-        onSubmit={() => setLoading(true)}
         className="flex flex-col gap-4 font-medium text-lg"
       >
         <div>
@@ -106,7 +101,7 @@ export default function Contact() {
           ) : null}
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder="John Doe"
             name="user_name"
             className="pb-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
           />
@@ -118,7 +113,7 @@ export default function Contact() {
 
           <input
             type="email"
-            placeholder="Your E-Mail Adress"
+            placeholder="john.doe@mail.com"
             name="user_email"
             className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
           />
@@ -130,7 +125,7 @@ export default function Contact() {
           <textarea
             className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
             rows={6}
-            placeholder="Your Message"
+            placeholder="Leave a few kind words"
             name="message"
           ></textarea>
         </div>
@@ -138,7 +133,7 @@ export default function Contact() {
           type="submit"
           className="group md:ml-auto md:w-1/4 bg-gray-200 text-gray-900 rounded-2xl py-2 px-4 font-bold gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
         >
-          {loading ? (
+          {navigation.state === "submitting" ? (
             <>
               <svg
                 aria-hidden="true"
@@ -161,7 +156,7 @@ export default function Contact() {
               Loading...
             </>
           ) : (
-            "submit"
+            "Submit"
           )}
         </button>
       </Form>
