@@ -35,26 +35,20 @@ export default function Projects() {
       </h2>
       <Suspense fallback={<Loading />}>
         <Await resolve={response} errorElement={<Error />}>
-          {(response: Github[]) =>
-            response.length > 0 ? (
-              <ul className="flex flex-col gap-4">
-                {response.map((res) => (
-                  <Link to={res.html_url} key={res.id} className="">
-                    <li className="border-2 rounded-2xl p-6 dark:border-gray-600 dark:hover:bg-gray-950 dark:hover:border-emerald-500 hover:border-emerald-500 hover:bg-gray-100 transition-all duration-200">
-                      <h3 className="text-xl font-bold">{res.full_name}</h3>
-                      <span className="block text-gray-500 pt-1">
-                        {res.description || "No description provided"}
-                      </span>
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            ) : (
-              <span className="font-medium text-lg">
-                There are no projects yet :/
-              </span>
-            )
-          }
+          {(response: Github[]) => (
+            <ul className="flex flex-col gap-4">
+              {response.map((res) => (
+                <Link to={res.html_url} key={res.id} className="">
+                  <li className="border-2 rounded-2xl p-6 dark:border-gray-600 dark:hover:bg-gray-950 dark:hover:border-emerald-500 hover:border-emerald-500 hover:bg-gray-100 transition-all duration-200">
+                    <h3 className="text-xl font-bold">{res.full_name}</h3>
+                    <span className="block text-gray-500 pt-1">
+                      {res.description || "No description provided."}
+                    </span>
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          )}
         </Await>
       </Suspense>
     </div>
