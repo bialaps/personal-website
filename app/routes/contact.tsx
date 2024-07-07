@@ -76,7 +76,7 @@ export default function Contact() {
 
       setTimeout(() => {
         window.location.replace("/");
-      }, 5000);
+      }, 4000);
     }
   }, [actionData]);
 
@@ -103,7 +103,7 @@ export default function Contact() {
             type="text"
             placeholder="John Doe"
             name="user_name"
-            className="pb-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
           />
         </div>
         <div>
@@ -115,7 +115,7 @@ export default function Contact() {
             type="email"
             placeholder="john.doe@mail.com"
             name="user_email"
-            className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
           />
         </div>
         <div>
@@ -123,7 +123,7 @@ export default function Contact() {
             <small className="text-red-500">{actionData?.errors.message}</small>
           ) : null}
           <textarea
-            className="py-3 block w-full rounded-2xl bg-gray-100 dark:bg-gray-900 border-transparent focus:border-gray-500 dark:focus:border-gray-800 dark:placeholder:text-zinc-500 focus:bg-white focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
             rows={6}
             placeholder="Leave a few kind words"
             name="message"
@@ -131,7 +131,7 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="group md:ml-auto md:w-1/4 bg-gray-200 text-gray-900 rounded-2xl py-2 px-4 font-bold gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
+          className="group md:ml-auto md:w-1/4 bg-gray-100 text-gray-900 rounded-2xl py-2 px-4 font-bold gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
         >
           {navigation.state === "submitting" ? (
             <>

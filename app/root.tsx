@@ -30,10 +30,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Meta />
           <Links />
         </head>
-        <body className="dark:bg-gray-950">
-          <div className="w-screen dark:bg-gray-950 dark:text-gray-200 flex flex-col justify-between h-screen">
+        <body className="h-screen dark:bg-neutral-950 dark:text-gray-200">
+          <div className="w-screen h-full  flex flex-col justify-between">
             <Navigation />
-            <div className="container py-4 px-3 md:w-[55vw] mx-auto flex-grow dark:bg-gray-950 dark:text-gray-200">
+            <div className="container py-4 px-3 md:w-[55vw] mx-auto flex-grow">
               {children}
             </div>
             <ScrollRestoration />
