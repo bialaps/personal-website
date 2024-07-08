@@ -12,6 +12,7 @@ interface Errors {
 interface ActionData {
   errors?: Errors;
   success?: string;
+  spamBot?: string;
 }
 
 export async function action({ request }: ActionFunctionArgs) {
@@ -20,6 +21,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const email = String(formData.get("user_email"));
   const name = String(formData.get("user_name"));
   const message = String(formData.get("message"));
+  const bot = String(formData.get("bot-field"));
 
   const errors: Errors = {};
 
@@ -44,6 +46,11 @@ export async function action({ request }: ActionFunctionArgs) {
     },
   });
 
+  // If the honeypot field is filled, treat it as a bot submission
+  if (bot) {
+    return { spamBot: "Hello Computer. Your message was not send." }; // Send a generic success message
+  }
+
   if (Object.keys(errors).length) {
     return {
       errors: errors,
@@ -51,10 +58,10 @@ export async function action({ request }: ActionFunctionArgs) {
   } else {
     /* ADD TRY/CATCH TO SEND ERRORS FROM NODEMAILER */
     const info = await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: process.env.SENDER_EMAIL,
       to: process.env.RECIEVER_EMAIL,
       subject: "Contact Form: mbialas.de",
-      text: message,
+      text: `${name} <${email}> \n\n${message}`,
     });
 
     console.log("Message sent: %s", info.messageId);
@@ -71,7 +78,7 @@ export default function Contact() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    if (actionData?.success) {
+    if (actionData?.success || actionData?.spamBot) {
       form.current?.reset();
 
       setTimeout(() => {
@@ -90,11 +97,17 @@ export default function Contact() {
           {actionData?.success}
         </span>
       ) : null}
+      {!actionData?.errors && actionData?.spamBot && (
+        <span className="font-bold text-lg text-yellow-400">
+          {actionData.spamBot}
+        </span>
+      )}
       <Form
         method="post"
         ref={form}
         className="flex flex-col gap-4 font-medium text-lg"
       >
+        <input name="bot-field" placeholder="do not fill this" type="hidden" />
         <div>
           {actionData?.errors?.name ? (
             <small className="text-red-500">{actionData?.errors.name}</small>
