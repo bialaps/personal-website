@@ -142,6 +142,12 @@ export default function Contact() {
             name="message"
           ></textarea>
         </div>
+        <small className="text-gray-400 dark:text-gray-600">
+          By submitting the form, you consent to the processing of your personal
+          data in accordance with our privacy policy. Your data will only be
+          used to process your request and will not be passed on to third
+          parties.
+        </small>
         <button
           type="submit"
           className="group md:ml-auto md:w-1/4 bg-gray-100 text-gray-900 rounded-2xl py-2 px-4 font-bold gap-3 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
