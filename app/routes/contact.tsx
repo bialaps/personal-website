@@ -7,6 +7,7 @@ interface Errors {
   email?: string;
   name?: string;
   message?: string;
+  server?: string;
 }
 
 interface ActionData {
@@ -46,17 +47,17 @@ export async function action({ request }: ActionFunctionArgs) {
     },
   });
 
-  // If the honeypot field is filled, treat it as a bot submission
   if (bot) {
-    return { spamBot: "Hello Computer. Your message was not send." }; // Send a generic success message
+    return { spamBot: "Hello Computer. Your message was not send." };
   }
 
   if (Object.keys(errors).length) {
     return {
       errors: errors,
     };
-  } else {
-    /* ADD TRY/CATCH TO SEND ERRORS FROM NODEMAILER */
+  }
+
+  try {
     const info = await transporter.sendMail({
       from: process.env.SENDER_EMAIL,
       to: process.env.RECIEVER_EMAIL,
@@ -69,6 +70,11 @@ export async function action({ request }: ActionFunctionArgs) {
       success:
         "Your message has been sent, I will get back to you as soon as possible.",
     };
+  } catch (error) {
+    console.error("Error sending email:", error);
+    errors.server =
+      "There was an error sending your message. Please try again later.";
+    return { errors };
   }
 }
 

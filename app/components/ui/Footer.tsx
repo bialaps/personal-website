@@ -8,7 +8,7 @@ export default function Footer() {
         to="/imprint"
         className="hover:text-emerald-500 transition-all duration-200"
       >
-        Impressum
+        Imprint & Privacy Policy
       </Link>
     </footer>
   );
