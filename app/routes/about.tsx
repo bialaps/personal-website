@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { Linkedin } from "lucide-react";
+import { SiLinkedin as Linkedin } from "@icons-pack/react-simple-icons";
 
 export default function About() {
   return (

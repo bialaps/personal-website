@@ -1,7 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
-import { Linkedin, Instagram, Github } from "lucide-react";
+import {
+  SiGithub as Github,
+  SiInstagram as Instagram,
+  SiLinkedin as Linkedin,
+} from "@icons-pack/react-simple-icons";
 
 import ProfilePicture from "./../assets/img/vbt.jpg";
 
