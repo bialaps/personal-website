@@ -11,10 +11,10 @@ export default function Navigation() {
         >
           mbialas.de
         </NavLink>
-        <span>|</span>
         <ThemeToggle />
+        <span>|</span>
       </div>
-      <ul className="navbar-nav flex gap-3 md:gap-4 text-lg font-bold items-center justify-center">
+      <ul className="navbar-nav flex gap-3 md:gap-4 text-lg font-medium items-center justify-center">
         <li>
           <NavLink
             to="/about"
