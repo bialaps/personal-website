@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 
 import { Linkedin, Instagram, Github } from "lucide-react";
 
-import ProfilePicture from "./../assets/img/vbt.jpg";
+import ProfilePicture from "./../assets/img/mbp.jpg";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,7 +23,7 @@ export default function Index() {
         <img
           src={ProfilePicture}
           alt="Side Portrait"
-          className="w-44 h-44 md:w-46 md:h-46 object-cover grayscale rounded-full"
+          className="w-44 h-44 md:w-46 md:h-46 object-cover grayscale rounded-full object-[-0%_15%]"
         />
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-emerald-500">
