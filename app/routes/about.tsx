@@ -8,14 +8,6 @@ export default function About() {
         <h2 className="text-3xl text-center md:text-left md:text-4xl font-bold text-emerald-500 pb-4">
           About Me
         </h2>
-        {/* <img
-          src="https://monza-closed.web.app/static/media/pic5.efe583754b7d2a5184f8.jpg"
-          alt="Indoor Karting track in Herne, Germany"
-          className="h-[200px] md:h-[300px] w-full object-cover mb-1 mt-3 rounded-2xl grayscale"
-        />
-        <small className="text-gray-400 block mb-6 ">
-          Go-kart track where I did my first laps
-        </small> */}
       </div>
       <p className="md:text-xl text-lg font-medium leading-relaxed md:leading-relaxed">
         Hello, I&apos;m Marcel, 29-year-old from Germany, living in the Ruhr
