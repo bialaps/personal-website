@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { SiLinkedin as Linkedin } from "@icons-pack/react-simple-icons";
+import { SiXing as Xing } from "@icons-pack/react-simple-icons";
 
 export default function About() {
   return (
@@ -27,13 +27,10 @@ export default function About() {
         clean code and appealing design. I am always on the lookout for new
         technologies and projects that challenge and expand my skills.
       </p>
-      <Link
-        to="https://www.linkedin.com/in/marcel-bialas-a4374a28b/"
-        className="my-12"
-      >
+      <Link to="https://www.xing.com/profile/Marcel_Bialas2" className="my-12">
         <button className="flex items-center justify-center bg-gray-200 text-gray-900 rounded-2xl py-3 px-6 font-bold md:text-md gap-3 mt-6 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300">
-          <Linkedin />
-          View CV on LinkedIn
+          <Xing />
+          View CV on Xing
         </button>
       </Link>
     </>
