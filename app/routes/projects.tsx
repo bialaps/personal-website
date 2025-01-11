@@ -13,7 +13,7 @@ interface Github {
 
 export const loader = async () => {
   const res = fetch(
-    "https://api.github.com/users/marcelbialas/repos?sort=created&direction=desc",
+    "https://api.github.com/users/aeon1n/repos?sort=created&direction=desc",
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -21,7 +21,7 @@ export const loader = async () => {
     }
   );
 
-  const data = res.then((data) => data.json());
+  const data = res.then((data) => data.json().catch((err) => console.log(err)));
   return defer({ response: data });
 };
 

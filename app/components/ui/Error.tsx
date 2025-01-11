@@ -2,7 +2,7 @@ import { Bug } from "lucide-react";
 
 export default function Error() {
   return (
-    <div className="flex flex-col justify-center items-center pt-24 text-gray-900">
+    <div className="flex flex-col justify-center items-center pt-24 text-gray-900 dark:text-gray-200">
       <Bug size="48" className="" />
       <h2 className="text-2xl md:text-4xl font-bold pt-2">
         Something went wrong :/

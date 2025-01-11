@@ -1,7 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
-import { Linkedin, Instagram, Github } from "lucide-react";
+import {
+  SiXing as Xing,
+  SiGithub as Github,
+} from "@icons-pack/react-simple-icons";
 
 import ProfilePicture from "./../assets/img/mbp.jpg";
 
@@ -36,19 +39,13 @@ export default function Index() {
       </h2>
       <div className="socials flex gap-4 text-gray-600 dark:text-gray-200">
         <Link
-          to="https://www.github.com/marcelbialas"
+          to="https://www.github.com/aeon1n"
           className="hover:text-emerald-500 transition-all duration-200"
         >
           <Github size="28" />
         </Link>
-        <Link to="https://www.instagram.com/marcelbialas">
-          <Instagram
-            size="28"
-            className="hover:text-emerald-500 transition-all duration-200"
-          />
-        </Link>
-        <Link to="https://www.linkedin.com/in/marcel-bialas-a4374a28b/">
-          <Linkedin
+        <Link to="https://www.xing.com/profile/Marcel_Bialas">
+          <Xing
             size="28"
             className="hover:text-emerald-500 transition-all duration-200"
           />
