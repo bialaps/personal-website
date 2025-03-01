@@ -12,7 +12,6 @@ export default function ThemeToggle() {
         "(prefers-color-scheme: dark)"
       ).matches;
       setTheme(systemPrefersDark ? "dark" : "light");
-      console.log(systemPrefersDark);
     }
   }, []);
 
