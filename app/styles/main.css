@@ -25,3 +25,15 @@
 body {
   font-family: "Sn Pro", sans-serif;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color-scheme: light;
+  }
+}

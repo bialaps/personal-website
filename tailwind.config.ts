@@ -6,5 +6,5 @@ export default {
     extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
-  darkMode: "class",
+  // darkMode: "class",
 } satisfies Config;
