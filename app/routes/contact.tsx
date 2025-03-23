@@ -65,7 +65,6 @@ export async function action({ request }: ActionFunctionArgs) {
       text: `${name} <${email}> \n\n${message}`,
     });
 
-    console.log("Message sent: %s", info.messageId);
     return {
       success:
         "Your message has been sent, I will get back to you as soon as possible.",
