@@ -121,7 +121,7 @@ export default function Contact() {
             type="text"
             placeholder="John Doe"
             name="user_name"
-            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 dark:focus:bg-neutral-900 focus:outline-none focus:ring-0"
           />
         </div>
         <div>
@@ -133,7 +133,7 @@ export default function Contact() {
             type="email"
             placeholder="john.doe@mail.com"
             name="user_email"
-            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 dark:focus:bg-neutral-900 focus:outline-none focus:ring-0"
           />
         </div>
         <div>
@@ -141,7 +141,7 @@ export default function Contact() {
             <small className="text-red-500">{actionData?.errors.message}</small>
           ) : null}
           <textarea
-            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 focus:ring-0"
+            className="p-3 block w-full rounded-2xl bg-gray-100 dark:border dark:border-neutral-900 dark:bg-transparent border-transparent focus:border-gray-300 dark:focus:border-neutral-800 dark:placeholder:text-zinc-500 focus:bg-gray-100 dark:focus:bg-neutral-900 focus:outline-none focus:ring-0"
             rows={6}
             placeholder="Leave a few kind words"
             name="message"
