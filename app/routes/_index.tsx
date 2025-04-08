@@ -6,7 +6,7 @@ import {
   SiGithub as Github,
 } from "@icons-pack/react-simple-icons";
 
-import ProfilePicture from "./../assets/img/mbp.jpg";
+import ProfilePicture from "./../assets/img/pb.png";
 
 export const meta: MetaFunction = () => {
   return [
