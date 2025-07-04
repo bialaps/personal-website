@@ -10,7 +10,7 @@ export default function About() {
         </h2>
       </div>
       <p className="md:text-xl text-lg font-medium leading-relaxed md:leading-relaxed">
-        Hello, I&apos;m Marcel, 29-year-old from Germany, living in the Ruhr
+        Hello, I&apos;m Marcel, 30-year-old from Germany, living in the Ruhr
         area. I discovered my passion for motorsport and music at an early age.
         For many years, I worked at a karting track, where I was able to turn my
         enthusiasm for motorsport into a profession. In addition, I used to be a
