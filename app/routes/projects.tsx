@@ -12,7 +12,7 @@ interface Github {
 
 export const loader = async () => {
   const res = await fetch(
-    "https://api.github.com/users/aeon1n/repos?sort=created&direction=desc",
+    "https://api.github.com/users/bialaps/repos?sort=created&direction=desc",
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -25,6 +25,7 @@ export const loader = async () => {
   }
 
   const data = await res.json();
+
   return { repos: data };
 };
 
@@ -61,8 +62,7 @@ export default function Projects() {
             {visibleCount < repos.length && (
               <button
                 className="flex items-center justify-center bg-gray-200 text-gray-900 rounded-2xl py-3 px-6 font-bold md:text-md gap-3 mt-6 md:mb-6 mb-16 hover:bg-emerald-500 transition-all duration-300 cursor-pointer"
-                onClick={loadMore}
-              >
+                onClick={loadMore}>
                 Load more
               </button>
             )}

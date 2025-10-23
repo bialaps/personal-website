@@ -38,9 +38,8 @@ export default function Index() {
       </h2>
       <div className="socials flex gap-4 text-gray-600 dark:text-gray-200">
         <Link
-          to="https://www.github.com/aeon1n"
-          className="hover:text-emerald-500 transition-all duration-200"
-        >
+          to="https://www.github.com/bialaps"
+          className="hover:text-emerald-500 transition-all duration-200">
           <Github size="28" />
         </Link>
         <Link to="https://www.xing.com/profile/Marcel_Bialas2">
